@@ -44,7 +44,7 @@ jobs:
       - run: echo $PATH
       - run: gem --version && ruby --version
       - run: |
-          name : run
+          name: run
           command: gradle -q intro
           when: always
 workflows:
