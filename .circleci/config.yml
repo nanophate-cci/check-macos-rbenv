@@ -43,7 +43,7 @@ jobs:
           echo y | sdkmanager --licenses 
       - run: echo $PATH
       - run: gem --version && ruby --version
-      - run: |
+      - run:
           name: run
           command: gradle -q intro
           when: always
