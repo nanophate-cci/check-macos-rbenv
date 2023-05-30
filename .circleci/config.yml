@@ -22,6 +22,10 @@ jobs:
           command: tail -f /private/var/log/**/*.log
           background: true
       - run: sysctl machdep.cpu.brand_string
+      - run:
+          name: Set Ruby Version
+          command: rbenv global 3.0.5 && rbenv rehash
+      - run: gem --version && ruby --version
       - macos/switch-ruby:
           version: "3.0.5"
       - run: gem --version && ruby --version
